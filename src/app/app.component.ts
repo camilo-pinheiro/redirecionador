@@ -12,6 +12,7 @@ export class AppComponent {
     console.log(this.document.location)
     const url = `https://${this.document.location.host.split('.')[1]}.${this.document.location.host.split('.')[2]}/${this.document.location.host.split('.')[0]}${this.document.location.pathname}`
     console.log(url);
+    return;
     setTimeout(() => {
       window.location.href = url;
     }, 2000);
