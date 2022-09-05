@@ -16,12 +16,11 @@ export class AppComponent {
   constructor() {
     const {
       hostname, origin
-    } = new URL('https://dnyaneshtechno.sharepoint.com')
+    } = new URL('https://dnyaneshtechno.sharepoint.com/room/list?a=1')
 
     const [subdomain] = hostname.split('.');
     this.hostname = hostname;
     this.subdomain = subdomain;
 
-    this.urldata = new URL('https://dnyaneshtechno.sharepoint.com');
   }
 }
