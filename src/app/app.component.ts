@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'redirecionador';
   constructor(@Inject(DOCUMENT) private document: Document) {
     console.log(this.document.location)
-    console.log(this.document.location.host.split('.')[0])
+    const url = this.document.location.host.split('.')[1] + `.` + this.document.location.host.split('.')[2] + `/` + this.document.location.host.split('.')[0] + this.document.location.pathname
+    console.log(url)
   }
 }
