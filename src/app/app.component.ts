@@ -12,9 +12,6 @@ export class AppComponent {
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router) {
     console.log(this.document.location)
     const url = `https://${this.document.location.host.split('.')[1]}.${this.document.location.host.split('.')[2]}/${this.document.location.host.split('.')[0]}${this.document.location.pathname}${this.document.location.search}`
-    setTimeout(() => {
-      this.router.navigateByUrl(url);
-    }, 0);
     window.location.href = url;
   }
 }
