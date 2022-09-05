@@ -9,6 +9,6 @@ import { Component, Inject } from '@angular/core';
 export class AppComponent {
   title = 'redirecionador';
   constructor(@Inject(DOCUMENT) private document: Document) {
-    this.document.location;
+    console.log(this.document.location)
   }
 }
