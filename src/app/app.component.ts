@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +14,10 @@ export class AppComponent {
 
   urldata: any;
 
-  constructor() {
+  constructor(private router: Router) {
     const {
       hostname, origin
-    } = new URL('https://dnyaneshtechno.sharepoint.com/room/list?a=1')
+    } = new URL(this.router.url)
 
     const [subdomain] = hostname.split('.');
     this.hostname = hostname;
